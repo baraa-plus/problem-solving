@@ -12,7 +12,7 @@ class Solution:
         dict = {}
         for i in range(len(nums)):
             number_to_check = target - nums[i]
-            if somewhat in dict:
+            if number_to_check in dict:
                 return [dict[somewhat], i]
             dict[nums[i]] = i
         return []
