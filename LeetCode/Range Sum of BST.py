@@ -20,13 +20,13 @@ class Solution:
 class Solution:
     def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
         result = 0
-        bfs = []
-        bfs.append(root)
+        bfs = Queue()
+        bfs.put(root)
         while (bfs):
-            r = bfs.pop()
+            r = bfs.get()
             if (r):
-                bfs.append(r.left)
-                bfs.append(r.right)
+                bfs.put(r.left)
+                bfs.put(r.right)
                 if (r.val >= low and r.val <= high):
                     result += r.val
         return result
