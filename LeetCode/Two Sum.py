@@ -5,6 +5,7 @@ class Solution:
             for j in range(i + 1, len(nums)):
                 if nums[i] + nums[j] == target:
                     return [i, j]
+        return []
 
 # Method - 2:
 class Solution:
@@ -13,6 +14,6 @@ class Solution:
         for i in range(len(nums)):
             number_to_check = target - nums[i]
             if number_to_check in dict:
-                return [dict[somewhat], i]
+                return [dict[number_to_check], i]
             dict[nums[i]] = i
         return []
