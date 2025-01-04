@@ -11,7 +11,7 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         dict = {}
         for i in range(len(nums)):
-            somewhat = target - nums[i]
+            number_to_check = target - nums[i]
             if somewhat in dict:
                 return [dict[somewhat], i]
             dict[nums[i]] = i
