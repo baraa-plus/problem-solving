@@ -29,3 +29,19 @@ class Solution:
                 result += hashMap[num] * hashMap[com]
 
         return result
+
+
+# Method - 3 (Counting Sort):
+class Solution:
+    def countKDifference(self, nums: list[int], k: int) -> int:
+        data = [0] * 101
+        for num in nums:
+            data[num] += 1
+        
+        result = 0
+        i = 0
+        while i + k < 101:
+            result += data[i] * data[i + k]
+            i += 1
+
+        return result
