@@ -12,4 +12,3 @@ class Solution:
                     digit_sum += int(char)
         
         return nums_sum - digit_sum
-    
