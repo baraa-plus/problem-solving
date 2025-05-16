@@ -12,4 +12,3 @@ class Solution:
             result[i] = dict[heights[i]]
         
         return result
-    
